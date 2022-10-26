@@ -1,0 +1,18 @@
+$colGray: #999999;
+$colDark: #121212;
+
+
+$url-font: '../fonts/';
+
+@mixin font($f-name, $f-path, $f-weight: normal, $f-style: normal){
+	@font-face{
+		font-family: $f-name;
+		src: url('#{$url-font}#{$f-path}.eot');
+		src: url('#{$url-font}#{$f-path}.eot?#iefix') format('embedded-opentype'),
+		url('#{$url-font}#{$f-path}.woff') format('woff'),
+		url('#{$url-font}#{$f-path}.ttf') format('truetype');
+		font-weight: $f-weight;
+		font-style: $f-style;
+    font-display: swap;
+  }
+}
